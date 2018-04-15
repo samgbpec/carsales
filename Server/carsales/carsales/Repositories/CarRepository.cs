@@ -27,6 +27,7 @@ namespace carsales.Repositories
 
         public CarRepository(IConfiguration config)
         {
+            //json data file path from app settings
             _path = config.GetSection("DataSource").Value;
         }
         

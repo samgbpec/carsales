@@ -31,6 +31,7 @@ namespace carsales
         {
             services.AddOptions();
 
+            //enabled cors for angular client
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigins",
