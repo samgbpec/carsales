@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    Filter by seller type -  
+    <select name="term"  [(ngModel)]="term">
+      <option value="Private">Private</option>
+      <option value="Dealer">Dealer</option>
+    </select>
+    <br/>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-md-6"><h5>Title</h5></div>
+      <div class="col-md-3"><h5>Price</h5></div>
+      <div class="col-md-3"><h5>Seller</h5></div>
+    </div>
+
+  <div *ngFor='let car of _cars | filter : term' class="row">
+      <div class="col-md-6">
+        <a [routerLink]="['/cardetails', car.id]">{{car.make + " "+car.model+" "+car.year}}</a>
+      </div>
+      <div class="col-md-3">
+        {{car.price}}
+      </div>
+      <div class="col-md-3">
+        {{car.seller}}
+      </div>
+ 
+  </div>
+</div>

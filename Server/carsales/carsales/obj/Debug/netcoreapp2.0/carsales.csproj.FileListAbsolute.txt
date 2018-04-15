@@ -1,0 +1,11 @@
+C:\Data\Carsales\Server\carsales\carsales\bin\Debug\netcoreapp2.0\carsales.deps.json
+C:\Data\Carsales\Server\carsales\carsales\bin\Debug\netcoreapp2.0\carsales.runtimeconfig.json
+C:\Data\Carsales\Server\carsales\carsales\bin\Debug\netcoreapp2.0\carsales.runtimeconfig.dev.json
+C:\Data\Carsales\Server\carsales\carsales\bin\Debug\netcoreapp2.0\carsales.dll
+C:\Data\Carsales\Server\carsales\carsales\obj\Debug\netcoreapp2.0\carsales.csprojResolveAssemblyReference.cache
+C:\Data\Carsales\Server\carsales\carsales\obj\Debug\netcoreapp2.0\carsales.csproj.CoreCompileInputs.cache
+C:\Data\Carsales\Server\carsales\carsales\obj\Debug\netcoreapp2.0\carsales.AssemblyInfoInputs.cache
+C:\Data\Carsales\Server\carsales\carsales\obj\Debug\netcoreapp2.0\carsales.AssemblyInfo.cs
+C:\Data\Carsales\Server\carsales\carsales\bin\Debug\netcoreapp2.0\carsales.pdb
+C:\Data\Carsales\Server\carsales\carsales\obj\Debug\netcoreapp2.0\carsales.dll
+C:\Data\Carsales\Server\carsales\carsales\obj\Debug\netcoreapp2.0\carsales.pdb
