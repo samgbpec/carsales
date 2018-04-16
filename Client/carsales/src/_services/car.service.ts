@@ -11,13 +11,14 @@ export class  CarService {
     
     constructor(private _http: Http, private _config:AppConfig) { }
  
-   
+   //Get list of cars -- update the apiurl in appconfig.ts 
     public ListCars = (): Observable<Car[]> => {
         console.log(this._config.apiUrl+'/car');
         return this._http.get(this._config.apiUrl+'/car').map(res => res.json());
        
     }
 
+    ////get car details
     public CarDetails = (Id:number): Observable<Car> => {
         return this._http.get(this._config.apiUrl+'/car/'+Id).map(res => res.json());
      }

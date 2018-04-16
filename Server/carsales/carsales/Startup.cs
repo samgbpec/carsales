@@ -31,7 +31,7 @@ namespace carsales
         {
             services.AddOptions();
 
-            //enabled cors for angular client
+            //enabled cors for car sales angular client
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigins",
@@ -56,8 +56,10 @@ namespace carsales
         {
 
 
-
+            //Added only console logger for now
             loggerFactory.AddConsole();
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

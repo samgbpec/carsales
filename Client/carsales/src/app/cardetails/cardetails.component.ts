@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CardetailsComponent implements OnInit {
 
-  _car:Car=new Car;
+  _car:Car;
   _id:number;
   _sub:any;
 
@@ -20,17 +20,25 @@ export class CardetailsComponent implements OnInit {
   
 
   ngOnInit() {
+
+    //subscrive to get id parameter value
     this._sub = this._route.params.subscribe(params => {
       this._id = +params['id']; 
-
-      this._carService.CarDetails(this._id).subscribe(res=>{
-        this._car=res;
-        console.log(this._car);
-      });
-      
    });
 
+   //get the car details
+   this._sub.add(this._carService.CarDetails(this._id).subscribe(res=>{
+    this._car=res;
+    console.log(this._car);
+  }));
+
    
+  }
+
+
+  //unsubscribe observable
+  ngOnDestroy() {
+    this._sub.unsubscribe();
   }
 
 }

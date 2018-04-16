@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Car } from '../../_models/car';
 import { CarService } from '../../_services/car.service';
 import { FilterPipe } from '../../_pipes/filter';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-cars',
@@ -10,17 +11,19 @@ import { FilterPipe } from '../../_pipes/filter';
 })
 export class CarsComponent implements OnInit {
 
-  _cars:Car[];
-  term="";
+  //to pass the search term to filter pipe
+  _term="";
 
-  constructor(private _carService:CarService) { 
-   
+  public _cars$:Observable<Car[]>;
+
+  constructor(private _carService:CarService) {   
   }
 
- 
 
   ngOnInit() {
-    this._carService.ListCars().subscribe(res=>this._cars=res);
+
+    //obervable subscription and unsubscription to be taken care by async pipe in template
+    this._cars$ = this._carService.ListCars();
   }
 
 }

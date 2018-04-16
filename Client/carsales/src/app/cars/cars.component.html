@@ -1,7 +1,7 @@
 <div class="container">
   <div>
     Filter by seller type -  
-    <select name="term"  [(ngModel)]="term">
+    <select name="term"  [(ngModel)]="_term">
       <option value="Private">Private</option>
       <option value="Dealer">Dealer</option>
     </select>
@@ -14,7 +14,11 @@
       <div class="col-md-3"><h5>Seller</h5></div>
     </div>
 
-  <div *ngFor='let car of _cars | filter : term' class="row">
+  <div  *ngIf="(_cars$ | async)?.length==0" class="row">
+    No records found
+  </div>
+  
+  <div *ngFor='let car of _cars$ | async | filter : _term ' class="row">
       <div class="col-md-6">
         <a [routerLink]="['/cardetails', car.id]">{{car.make + " "+car.model+" "+car.year}}</a>
       </div>
